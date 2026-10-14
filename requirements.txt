@@ -1,0 +1,8 @@
+pandas
+numpy
+scikit-learn==1.8.0
+matplotlib
+kagglehub==0.3.3
+streamlit
+joblib
+kagglesdk
