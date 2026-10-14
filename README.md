@@ -40,28 +40,6 @@
 
 The near-perfect ISOT score doesn't carry over to a new source. Domain adaptation is what made the model hold up on unseen data.
 
-## Project structure
-
-```
-app.py                  # Streamlit interface with automatic model rollback
-main.py                 # end-to-end training & evaluation pipeline
-data_preprocessing.py   # dataset loading and text cleaning
-model_training.py       # vectorizer selection, tuning, artifact saving
-config.py               # logging and constants (fixed RANDOM_STATE = 42)
-stress_test.py          # latency under increasing request load
-tests/                  # unit tests (run in CI)
-*_model.pkl, *_tfidf.pkl  # trained baseline & adapted models
-```
-
-## Quick start
-
-```bash
-pip install -r requirements.txt
-streamlit run app.py        # launch the web app using the included models
-python main.py              # (optional) retrain everything from scratch
-pytest tests/               # run the unit tests
-```
-
 ## Responsible AI
 
 The interface shows a confidence percentage and color-coded indicators. It also states clearly that Tahqiq is a **decision-support tool, not a final authority**, in line with SDAIA's AI ethics principles of fairness, transparency, and accountability.
